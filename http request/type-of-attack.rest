@@ -1,0 +1,37 @@
+### Find All type-of-attack
+GET http://localhost:3000/type-of-attack
+Content-Type: application/json
+
+
+### Create type-of-attack
+POST http://localhost:3000/type-of-attack
+Content-Type: application/json
+
+{
+  "title": "ДАЛЬНИЙ БОЙ"
+}
+
+
+### Find One type-of-attack
+GET http://localhost:3000/type-of-attack/1
+Content-Type: application/json
+
+
+### Update type-of-attack
+PATCH http://localhost:3000/type-of-attack/1
+Content-Type: application/json
+
+{
+  "title": "Carry"
+}
+
+
+
+### DELETE type-of-attack
+DELETE http://localhost:3000/type-of-attack/2
+
+
+
+
+
+

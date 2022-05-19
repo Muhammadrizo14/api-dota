@@ -1,0 +1,50 @@
+### Find All hero
+GET http://localhost:3000/hero
+Content-Type: application/json
+
+
+### Create hero
+POST http://localhost:3001/hero
+Content-Type: application/json
+
+{
+  "id": 7,
+  "name": "Phantom Assassin",
+  "uron": "55-57",
+  "shit": "4.8",
+  "short_disc": "ПРЫГАЕТ К ВРАГАМ И НАНОСИТ ИМ КРИТИЧЕСКИЕ УДАРЫ",
+  "disc": "Phantom Assassin идёт в наступление, едва завидев свою жертву. Мгновенно сблизившись с ней, Мортред легко уклоняется от атак и обрушивает на врага удар за ударом, любой из которых может оказаться роковым.",
+  "image_url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phantom_assassin.png",
+  "gif_url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phantom_assassin.webm",
+  "bashara": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png",
+  "typeOfAttackId": 1,
+  "hardlyId": 1,
+  "attributeId": 2,
+  "rolesId": 1
+}
+
+
+### Find One hero
+GET http://localhost:3000/hero/1
+Content-Type: application/json
+
+
+### Update hero
+PATCH http://localhost:3000/hero/1
+Content-Type: application/json
+
+{
+  "uron": "40-46",
+  "shit": "3.5"
+}
+
+
+
+### DELETE hero
+DELETE http://localhost:3000/hero/11
+
+
+
+
+
+

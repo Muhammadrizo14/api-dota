@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Hero {
+    id                  Int             @default(autoincrement()) @id
+    name                String          @unique
+    uron                String
+    shit                String
+    short_disc          String?
+    disc                String?
+    image_url           String
+    gif_url             String
+    bashara             String
+
+
+    typeOfAttackId      Int
+    hardlyId            Int
+    attributeId         Int
+    rolesId             Int
+
+
+    Roles               Roles           @relation(fields: [rolesId], references: [id])
+    TypeOfAttack        TypeOfAttack    @relation(fields: [typeOfAttackId], references: [id])
+    Hardly              Hardly          @relation(fields: [hardlyId], references: [id])
+    Attribute           Attribute       @relation(fields: [attributeId], references: [id])
+
+}
+
+
+model Roles {
+    id                   Int            @default(autoincrement()) @id
+    title                String
+    short_disc           String?
+    disc                 String?
+
+    hero     Hero[]
+}
+
+
+model TypeOfAttack {
+    id                   Int            @default(autoincrement()) @id
+    title                String
+    hero     Hero[]
+}
+
+model Hardly {
+    id                   Int            @default(autoincrement()) @id
+    level                Int
+
+    hero                 Hero[]
+}
+
+
+model Attribute {
+    id                   Int            @default(autoincrement()) @id
+    title                String
+    image_url            String
+    hero                 Hero[]
+}

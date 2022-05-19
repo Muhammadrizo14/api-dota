@@ -1,0 +1,32 @@
+### Find All hardly
+GET http://localhost:3000/hardly
+Content-Type: application/json
+
+
+### Create hardly
+POST http://localhost:3000/hardly
+Content-Type: application/json
+
+{
+  "level": 3
+}
+
+
+### Find One hardly
+GET http://localhost:3000/hardly/1
+Content-Type: application/json
+
+
+### Update hardly
+PATCH http://localhost:3000/hardly/1
+Content-Type: application/json
+
+{
+  "title": "Carry"
+}
+
+
+
+### DELETE hardly
+DELETE http://localhost:3000/hardly/3
+

@@ -1,0 +1,37 @@
+### Find All roles
+GET http://localhost:3000/roles
+Content-Type: application/json
+
+
+### Create roles
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+  "title": "Inditiator"
+}
+
+
+### Find One roles
+GET http://localhost:3000/roles/1
+Content-Type: application/json
+
+
+### Update roles
+PATCH http://localhost:3000/roles/1
+Content-Type: application/json
+
+{
+  "title": "Carry"
+}
+
+
+
+### DELETE roles
+DELETE http://localhost:3000/roles/11
+
+
+
+
+
+
