@@ -9,8 +9,8 @@ const port = 3001
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {cors: true});
-  const server = app.listen(process.env.PORT || 5000, () => {
-    console.log(`Express is working on port 5000`);
+  const server = app.listen(process.env.PORT || port, () => {
+    console.log(`Express is working on port ${port}`);
   });
 }
 bootstrap().then(() => {
